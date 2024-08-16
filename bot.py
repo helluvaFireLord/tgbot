@@ -20,6 +20,7 @@ def is_user_admin(chat_id, user_id):
     chat_member = bot.get_chat_member(chat_id, user_id) 
     return chat_member.status == "administrator" or chat_member.status == "creator" 
 
+
 @bot.message_handler(func=lambda message: True)
 def play_game(message):
     user_choice = message.text
